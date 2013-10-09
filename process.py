@@ -7,8 +7,9 @@ rows = 3
 pages = 150
 # 	/END
 
-#	Folder for source images
+#	Folder for source and final images
 input_dir = "input/"
+output_dir = "output/"
 
 #	2D list to store images
 parts = [["" for x in xrange(cols)] for x in xrange(rows)]
@@ -46,6 +47,6 @@ for pages_id in xrange(1,pages+1):
 		y = 0
 
 	#	Save & profit ...
-	new_page.save("output/page%03d.jpg" % pages_id)
+	new_page.save(output_dir + "page%03d.jpg" % pages_id)
 
 	print "Page %3d out of %d" % (pages_id, pages)
